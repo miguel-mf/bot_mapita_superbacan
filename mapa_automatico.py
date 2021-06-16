@@ -17,9 +17,9 @@ def mapita_superbacan(lat_sismo,lon_sismo,prof_sismo,mag_sismo,limites=(),mapa_f
         else:
             limites_mapas_y = (limites(1), limites(0))
         if limites(2) < limites(3):
-            limites_mapas_y = (limites(2), limites(3))
+            limites_mapas_x = (limites(2), limites(3))
         else:
-            limites_mapas_y = (limites(3), limites(2))
+            limites_mapas_x = (limites(3), limites(2))
     else:
 
         limites_mapas_y = [(-24, -16), (-28, -20), (-32, -24), (-36, -28),
