@@ -12,6 +12,7 @@ from crea_mapa import *
 def mapita_superbacan(lat_sismo,lon_sismo,prof_sismo,mag_sismo,limites=(),mapa_firmado=True)
     nombre_imagen = 'mapita_superbacan.png'
     if limites:
+        definir_limites="Y"
         if limites(0) < limites(1):
             limites_mapas_y = (limites(0), limites(1))
         else:
@@ -21,7 +22,7 @@ def mapita_superbacan(lat_sismo,lon_sismo,prof_sismo,mag_sismo,limites=(),mapa_f
         else:
             limites_mapas_x = (limites(3), limites(2))
     else:
-
+        definir_limites="N"
         limites_mapas_y = [(-24, -16), (-28, -20), (-32, -24), (-36, -28),
                             (-40, -32), (-44, -36), (-48, -40), (-52, -44),
                             (-56, -48)]
